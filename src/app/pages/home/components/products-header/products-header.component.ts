@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./products-header.component.scss']
 })
 export class ProductsHeaderComponent {
+  sort = 'desc';
+  itemsShowCount = 12;
 
+  onSortUpdated(newSort: string): void {
+    this.sort = newSort
+  }
+
+  OnItemsUpdated(count: number): void {
+    this.itemsShowCount = count
+  }
 }
