@@ -22,4 +22,9 @@ export class HomeComponent implements OnInit{
     this.cols = colsNum
     this.rowHeight = ROWS_HEIGHT[this.cols]
   }
+
+  onAddToCart(): void {
+    
+  }
+
 }
