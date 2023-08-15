@@ -3,7 +3,6 @@ import { Product } from 'src/app/models/product.model';
 import { CartService } from 'src/app/services/cart.service';
 
 const ROWS_HEIGHT: {[id:number]: number} = {1: 400, 3: 335, 4: 350};
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
