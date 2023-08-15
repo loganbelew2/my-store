@@ -9,17 +9,14 @@ const ROWS_HEIGHT: {[id:number]: number} = {1: 400, 3: 335, 4: 350};
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent {
   cols = 5;
   rowHeight = ROWS_HEIGHT[this.cols]
   category: string | undefined;
 
-  constructor(private cartService: CartService){
+  //inject CartSerivice as a dependency of the component
+  constructor(private cartService: CartService){}
 
-  }
-
-  ngOnInit(): void {
-}
   onShowCategory(newCategory: string): void {
     this.category = newCategory
   }
@@ -38,5 +35,4 @@ export class HomeComponent implements OnInit{
       id: product.id
     })
   }
-
 }
