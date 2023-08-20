@@ -28,11 +28,11 @@ export class CartService {
         items.push(item)
       }
 
-      this.cart.next({ items })
+      this.cart.next({ items: items })
       this._snackBar.open('1 item added to cart.', 'Ok', {duration: 3000});
     }
   
-    //method takes items and maps through each one, multiplies the price time quantity for item, then adds it to the total
+    //method takes items and maps through each one, multiplies the price times quantity for item, then adds it to the total
   getTotal(items: Array<CartItem>): number {
       return items. 
        map(item => item.price * item.quantity)

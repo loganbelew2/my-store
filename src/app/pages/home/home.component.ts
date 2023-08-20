@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService, } from 'src/app/services/cart.service';
 
 const ROWS_HEIGHT: {[id:number]: number} = {1: 400, 3: 335, 4: 350};
 @Component({
@@ -24,6 +24,8 @@ export class HomeComponent {
     this.cols = colsNum
     this.rowHeight = ROWS_HEIGHT[this.cols]
   }
+
+ 
 
   onAddToCart(product: Product): void {
     this.cartService.addToCart({

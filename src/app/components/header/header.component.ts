@@ -1,4 +1,4 @@
-import { Component, Input, } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -7,7 +7,9 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent  {
+  
+  
   //_cart is exclusive to this header component
   private _cart: Cart = { items: []};
   
@@ -21,7 +23,7 @@ export class HeaderComponent {
 
   /*setter function for cart property to set the cart and is invoked when the cart input is updated,
   map each quantity on item in cart and add current item quantity to total to get the sum, initial value is 0 */
-  //SETS CART'S TOTAL QUANTITY TO A PROPERTY
+  //SETS CART PROPERTY TO THE VALUE PASSED IN AS ARGUMENT, THEN SETS ITEMSQUANTITY TO TOTAL QUANTITY
   set cart(cart: Cart) {
     this._cart = cart;
     this.itemsQuantity = cart.items
@@ -41,4 +43,7 @@ export class HeaderComponent {
   onClearCart(){
     
   }
+
+
+
 }
