@@ -41,9 +41,9 @@ export class CartService {
 
    //method returns void and emits empty array to cart behavior subject and displays message
   clearCart(): void {
-    this.cart.next({items: []})
-    this._snackBar.open('cart is cleared', 'OK', {
+    this.cart.next({items: []});
+    this._snackBar.open("cart has been cleared", 'OK', {
       duration: 3000
-    });
-   }
+    })
+  }
 }
